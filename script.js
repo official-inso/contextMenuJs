@@ -47,7 +47,7 @@ var ContextMenu = {
 
     // Запрещяем котекст меню в программе но если включен дебаг то можно
     document.body.addEventListener("contextmenu", function (e) {
-      if (DEBUG) {
+      if (ContextMenu.var.DEBUG) {
         if (!e.ctrlKey) {
           e.preventDefault();
           e.stopPropagation();

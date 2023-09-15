@@ -204,6 +204,9 @@ contextmenulist[type='right_top']{
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
+contextmenulist contextmenulist[type='right_top']{
+  left: -15px;
+}
 contextmenulist[type='right_bottom']{
   left: 5px;
   bottom: 15px;
