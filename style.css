@@ -1,19 +1,19 @@
-/* :root {
+:root {
   --bg1: #fff;
   --bg2: #fff;
   --bg_title: #fff;
   --color: #142948;
-  --color2: #242E6F;
+  --color2: #242e6f;
   --color-dark: #303036;
-  --main-color1: #1A75FF;
-  --main-color1-hover: #1A75FF29;
+  --main-color1: #1a75ff;
+  --main-color1-hover: #1a75ff29;
   --main-color1-opacity: #0569ff0a;
 
   --contextBg: #fff;
 
   --outline: #065eab;
 
-  --selection: #1A75FF65;
+  --selection: #1a75ff65;
 
   --filter-logo: contrast(1) invert(0);
 
@@ -48,11 +48,11 @@
 
   --invert1: invert(1);
   --invert0: invert(0);
-} */
-:root{
-  --contextBg: #fff;
 }
-contextmenuscreen_noupdate{
+/* :root{
+  --contextBg: #fff;
+} */
+contextmenuscreen_noupdate {
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -62,7 +62,7 @@ contextmenuscreen_noupdate{
   overflow: hidden;
   display: block;
 }
-contextmenuscreen{
+contextmenuscreen {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -72,7 +72,7 @@ contextmenuscreen{
   /* display: inline-grid; */
   /* align-items: end; */
 }
-contextmenu{
+contextmenu {
   display: flex;
   position: absolute;
   box-shadow: 0 0 13px 0 rgb(29 29 29 / 15%);
@@ -90,11 +90,11 @@ contextmenu{
   transition: var(--trans-md);
   transition-property: opacity;
 }
-contextmenu[active]{
+contextmenu[active] {
   pointer-events: auto;
   opacity: 1;
 }
-contextmenuitem:not([hr]){
+contextmenuitem:not([hr]) {
   padding: 5px 10px;
   border-radius: var(--radius-lg);
   text-align: left;
@@ -110,10 +110,10 @@ contextmenuitem:not([hr]){
   align-items: flex-start;
   flex-direction: column;
 }
-contextmenuitem:not([hr]):hover{
+contextmenuitem:not([hr]):hover {
   background-color: #8080801a;
 }
-contextmenuitem[hr]{
+contextmenuitem[hr] {
   height: 1px;
   background-color: #8080801a;
   margin-top: 5px;
@@ -122,10 +122,12 @@ contextmenuitem[hr]{
   margin-right: 8px;
   width: calc(100% - 16px);
 }
-contextmenuitem:not([hr]):hover > .contextmenuitem-content > .contextmenuitem-more{
+contextmenuitem:not([hr]):hover
+  > .contextmenuitem-content
+  > .contextmenuitem-more {
   transform: rotate(0deg);
 }
-.contextmenuitem-ico{
+.contextmenuitem-ico {
   height: 28px;
   width: 20px;
   border-radius: var(--radius-md);
@@ -136,7 +138,7 @@ contextmenuitem:not([hr]):hover > .contextmenuitem-content > .contextmenuitem-mo
   font-size: 19px;
   pointer-events: none;
 }
-.contextmenuitem-text{
+.contextmenuitem-text {
   font-family: gl;
   width: 100%;
   font-size: 16px;
@@ -146,7 +148,7 @@ contextmenuitem:not([hr]):hover > .contextmenuitem-content > .contextmenuitem-mo
   white-space: nowrap;
   overflow: hidden;
 }
-.contextmenuitem-more{
+.contextmenuitem-more {
   height: 28px;
   width: 20px;
   border-radius: var(--radius-md);
@@ -158,7 +160,7 @@ contextmenuitem:not([hr]):hover > .contextmenuitem-content > .contextmenuitem-mo
   transition: var(--trans-md);
   transform: rotate(90deg);
 }
-contextmenulist{
+contextmenulist {
   display: flex;
   position: absolute;
   box-shadow: 0 0 13px 0 rgb(29 29 29 / 15%);
@@ -177,7 +179,7 @@ contextmenulist{
   opacity: 0;
   pointer-events: none;
 }
-contextmenulist[type='left_top']{
+contextmenulist[type="left_top"] {
   left: 0;
   top: 15px;
   bottom: initial;
@@ -186,7 +188,7 @@ contextmenulist[type='left_top']{
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
-contextmenulist[type='left_bottom']{
+contextmenulist[type="left_bottom"] {
   left: 0;
   bottom: 15px;
   top: initial;
@@ -195,7 +197,7 @@ contextmenulist[type='left_bottom']{
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
-contextmenulist[type='right_top']{
+contextmenulist[type="right_top"] {
   left: 5px;
   top: 15px;
   bottom: initial;
@@ -204,10 +206,10 @@ contextmenulist[type='right_top']{
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
-contextmenulist contextmenulist[type='right_top']{
+contextmenulist contextmenulist[type="right_top"] {
   left: -15px;
 }
-contextmenulist[type='right_bottom']{
+contextmenulist[type="right_bottom"] {
   left: 5px;
   bottom: 15px;
   top: initial;
@@ -216,68 +218,76 @@ contextmenulist[type='right_bottom']{
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
-contextmenuitem:hover > .contextmenuitem-content ~ contextmenulist[type='left_top']{
+contextmenuitem:hover
+  > .contextmenuitem-content
+  ~ contextmenulist[type="left_top"] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(-100%, 0px);
   top: 0;
   transition-delay: 0s;
 }
-contextmenuitem:hover > .contextmenuitem-content ~ contextmenulist[type='left_bottom']{
+contextmenuitem:hover
+  > .contextmenuitem-content
+  ~ contextmenulist[type="left_bottom"] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(-100%, 0px);
   bottom: 0;
   transition-delay: 0s;
 }
-contextmenuitem:hover > .contextmenuitem-content ~ contextmenulist[type='right_top']{
+contextmenuitem:hover
+  > .contextmenuitem-content
+  ~ contextmenulist[type="right_top"] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(100%, 0px);
   top: 0;
   transition-delay: 0s;
 }
-contextmenuitem:hover > .contextmenuitem-content ~ contextmenulist[type='right_bottom']{
+contextmenuitem:hover
+  > .contextmenuitem-content
+  ~ contextmenulist[type="right_bottom"] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(100%, 0px);
   bottom: 0;
   transition-delay: 0s;
 }
-.contextmenuitem-ico[red]{
+.contextmenuitem-ico[red] {
   color: var(--light_red);
   font-size: 16px;
 }
-.contextmenuitem-ico[orange]{
+.contextmenuitem-ico[orange] {
   color: var(--orange);
   font-size: 16px;
 }
-.contextmenuitem-ico[yellow]{
+.contextmenuitem-ico[yellow] {
   color: #fdd835;
   font-size: 16px;
 }
-.contextmenuitem-ico[green]{
+.contextmenuitem-ico[green] {
   color: var(--light_green);
   font-size: 16px;
 }
-.contextmenuitem-ico[blue]{
+.contextmenuitem-ico[blue] {
   color: var(--blue);
   font-size: 16px;
 }
-.contextmenuitem-ico[purple]{
+.contextmenuitem-ico[purple] {
   color: #9c27b0;
   font-size: 16px;
 }
-.contextmenuitem-ico[grey]{
+.contextmenuitem-ico[grey] {
   color: var(--grey);
   font-size: 16px;
 }
-.contextmenuitem-ico[all]{
+.contextmenuitem-ico[all] {
   font-size: 14px;
   font-weight: 700;
   opacity: 0.75;
 }
-.contextmenuitem-content{
+.contextmenuitem-content {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -288,7 +298,7 @@ contextmenuitem:hover > .contextmenuitem-content ~ contextmenulist[type='right_b
   gap: 10px;
   pointer-events: none;
 }
-contextmenucontent{
+contextmenucontent {
   width: 100%;
   background-color: transparent;
   border-radius: var(--radius-md);
@@ -299,32 +309,31 @@ contextmenucontent{
   justify-content: flex-start;
   align-items: flex-start;
 }
-contextmenuscreen::-webkit-scrollbar{
+contextmenuscreen::-webkit-scrollbar {
   display: none;
 }
-contextmenuscreen::-moz-scrollbar{
+contextmenuscreen::-moz-scrollbar {
   display: none;
 }
-contextmenuscreen::-ms-scrollbar{
+contextmenuscreen::-ms-scrollbar {
   display: none;
 }
-contextmenuscreen::-o-scrollbar{
+contextmenuscreen::-o-scrollbar {
   display: none;
 }
-@media only screen and (max-width: 500px) and (min-width: 10px){
-  
-  contextmenuscreen{
+@media only screen and (max-width: 500px) and (min-width: 10px) {
+  contextmenuscreen {
     background-color: #0000008c;
     z-index: 99999999;
     opacity: 0;
     transition: var(--trans-lg);
   }
-  contextmenuscreen[active]{
+  contextmenuscreen[active] {
     pointer-events: auto;
     opacity: 1;
     transition: var(--trans-md);
   }
-  contextmenu{
+  contextmenu {
     bottom: 0px;
     width: calc(100% - 20px);
     left: initial !important;
@@ -343,11 +352,11 @@ contextmenuscreen::-o-scrollbar{
     margin-top: 35vh;
     position: relative;
   }
-  contextmenu[active]{
+  contextmenu[active] {
     transform: translate(0px, 0%);
   }
-  contextmenu:before{
-    content: '';
+  contextmenu:before {
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -358,7 +367,7 @@ contextmenuscreen::-o-scrollbar{
     background-color: #7c7c7c69;
     border-radius: var(--radius-md);
   }
-  contextmenucontent{
+  contextmenucontent {
     width: 100%;
     /* background-color: #7c7c7c26; */
     border-radius: var(--radius-md);
@@ -370,13 +379,13 @@ contextmenuscreen::-o-scrollbar{
     align-items: flex-start;
     contain: content;
   }
-  contextmenuitem:not([hr]){
+  contextmenuitem:not([hr]) {
     padding: 10px 16px;
     width: calc(100% - 32px);
     border-radius: var(--radius-md);
     gap: 0px;
   }
-  contextmenulist{
+  contextmenulist {
     position: relative;
     height: 0px;
     left: initial !important;
@@ -396,23 +405,26 @@ contextmenuscreen::-o-scrollbar{
     transition: var(--trans-elg) !important;
     transition-property: height, margin-top !important;
   }
-  .contextmenuitem-ico{
+  .contextmenuitem-ico {
     font-size: 21px;
   }
-  .contextmenuitem-text{
+  .contextmenuitem-text {
     padding-top: 1px;
   }
-  contextmenuitem:not([active]):hover > .contextmenuitem-content > .contextmenuitem-more{
+  contextmenuitem:not([active]):hover
+    > .contextmenuitem-content
+    > .contextmenuitem-more {
     transform: rotate(90deg);
   }
-  contextmenuitem[active]:hover > .contextmenuitem-content > .contextmenuitem-more{
+  contextmenuitem[active]:hover
+    > .contextmenuitem-content
+    > .contextmenuitem-more {
     transform: rotate(-90deg);
   }
-  contextmenuitem > .contextmenuitem-content > .contextmenuitem-more{
+  contextmenuitem > .contextmenuitem-content > .contextmenuitem-more {
     transform: rotate(90deg);
   }
-  contextmenuitem[active] > .contextmenuitem-content > .contextmenuitem-more{
+  contextmenuitem[active] > .contextmenuitem-content > .contextmenuitem-more {
     transform: rotate(-90deg);
   }
-  
 }
