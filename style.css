@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bg1: #fff;
   --bg2: #fff;
   --bg_title: #fff;
@@ -48,10 +48,10 @@
 
   --invert1: invert(1);
   --invert0: invert(0);
-}
-/* :root{
-  --contextBg: #fff;
 } */
+:root {
+  --contextBg: #fff;
+}
 contextmenuscreen_noupdate {
   position: fixed;
   height: 100vh;
