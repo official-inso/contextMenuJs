@@ -1,0 +1,19 @@
+{
+  "name": "contextmenujs",
+  "version": "0.0.1",
+  "description": "Мега крутое контекстное меню!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/official-inso/contextMenuJs.git"
+  },
+  "author": "Roman Zhuzhgov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/official-inso/contextMenuJs/issues"
+  },
+  "homepage": "https://github.com/official-inso/contextMenuJs#readme"
+}
