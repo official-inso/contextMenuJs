@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/official-inso/contextMenuJs/issues"
   },
-  "homepage": "https://github.com/official-inso/contextMenuJs#readme"
+  "homepage": "https://github.com/official-inso/contextMenuJs#readme",
+  "typings": "contextmenujs.d.ts"
 }
