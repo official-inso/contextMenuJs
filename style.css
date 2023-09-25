@@ -104,7 +104,7 @@ contextmenuitem:not([hr]) {
   transition: var(--trans-md);
   cursor: pointer;
   gap: 10px;
-  width: calc(100% - 20px);
+  width: calc(100% - 0px);
   flex-wrap: nowrap;
   position: relative;
   align-items: flex-start;
@@ -179,7 +179,7 @@ contextmenulist {
   opacity: 0;
   pointer-events: none;
 }
-contextmenulist[type="left_top"] {
+contextmenulist[type='left_top'] {
   left: 0;
   top: 15px;
   bottom: initial;
@@ -188,7 +188,7 @@ contextmenulist[type="left_top"] {
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
-contextmenulist[type="left_bottom"] {
+contextmenulist[type='left_bottom'] {
   left: 0;
   bottom: 15px;
   top: initial;
@@ -197,7 +197,7 @@ contextmenulist[type="left_bottom"] {
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
-contextmenulist[type="right_top"] {
+contextmenulist[type='right_top'] {
   left: 5px;
   top: 15px;
   bottom: initial;
@@ -206,10 +206,10 @@ contextmenulist[type="right_top"] {
   transition-property: opacity, top, bottom;
   transition-delay: 0.1s;
 }
-contextmenulist contextmenulist[type="right_top"] {
+contextmenulist contextmenulist[type='right_top'] {
   left: -15px;
 }
-contextmenulist[type="right_bottom"] {
+contextmenulist[type='right_bottom'] {
   left: 5px;
   bottom: 15px;
   top: initial;
@@ -220,7 +220,7 @@ contextmenulist[type="right_bottom"] {
 }
 contextmenuitem:hover
   > .contextmenuitem-content
-  ~ contextmenulist[type="left_top"] {
+  ~ contextmenulist[type='left_top'] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(-100%, 0px);
@@ -229,7 +229,7 @@ contextmenuitem:hover
 }
 contextmenuitem:hover
   > .contextmenuitem-content
-  ~ contextmenulist[type="left_bottom"] {
+  ~ contextmenulist[type='left_bottom'] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(-100%, 0px);
@@ -238,7 +238,7 @@ contextmenuitem:hover
 }
 contextmenuitem:hover
   > .contextmenuitem-content
-  ~ contextmenulist[type="right_top"] {
+  ~ contextmenulist[type='right_top'] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(100%, 0px);
@@ -247,7 +247,7 @@ contextmenuitem:hover
 }
 contextmenuitem:hover
   > .contextmenuitem-content
-  ~ contextmenulist[type="right_bottom"] {
+  ~ contextmenulist[type='right_bottom'] {
   pointer-events: auto;
   opacity: 1;
   transform: translate(100%, 0px);
@@ -356,7 +356,7 @@ contextmenuscreen::-o-scrollbar {
     transform: translate(0px, 0%);
   }
   contextmenu:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
